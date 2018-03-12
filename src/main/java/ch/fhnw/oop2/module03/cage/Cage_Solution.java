@@ -1,0 +1,35 @@
+package ch.fhnw.oop2.module03.cage;
+
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * @author Dieter Holz
+ */
+public class Cage_Solution<T extends Animal> {
+
+    private Set<T> animals = new HashSet<>();
+
+    public int numberOfAnimals() {
+        return animals.size();
+    }
+
+    public boolean shelters(T animal) {
+        return animals.contains(animal);
+    }
+
+    public void jail(T animal) {
+        animals.add(animal);
+    }
+
+    public void setFree(T animal) {
+        animals.remove(animal);
+    }
+
+    public static <A extends Animal> void jailAll(Cage_Solution<A> c, A[] allAnimals) {
+        for(A animal : allAnimals){
+            c.jail(animal);
+        }
+
+    }
+}

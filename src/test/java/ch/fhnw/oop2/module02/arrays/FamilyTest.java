@@ -70,20 +70,20 @@ class FamilyTest {
 		assertSame(personB, oldest);
 	}
 
-//	@Test
-//	public void testFamilyGrows(){
-//		//given
-//		Family family = new Family(1);
-//		Person personA = new Person(30, 50, 1.70);
-//		Person personB = new Person(35, 45, 1.60);
-//
-//		family.add(personA);
-//
-//		//when
-//		family.add(personB);
-//
-//		//then
-//		assertTrue(family.isMember(personA));
-//        assertTrue(family.isMember(personB));
-//	}
+	@Test
+	public void testFamilyGrows(){
+		//given
+		Family family = new Family(2);
+		Person personA = new Person(30, 50, 1.70);
+		Person personB = new Person(35, 45, 1.60);
+
+		family.add(personA);
+
+		//when
+		family.add(personB);
+
+		//then
+		assertTrue(family.isMember(personA));
+        assertTrue(family.isMember(personB));
+	}
 }
