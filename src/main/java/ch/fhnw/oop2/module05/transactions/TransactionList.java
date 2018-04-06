@@ -70,8 +70,7 @@ public class TransactionList {
         allTransactions.stream()
                 .map(Transaction::getTrader)
                 .filter(trader -> trader.getCity().equals(from))
-                .map(Trader::getCity)
-                .forEach(trader -> trader.replaceAll(from, to));
+                .forEach(trader -> trader.setCity(to));
 
     }
 
@@ -80,13 +79,20 @@ public class TransactionList {
      */
     public int highestValue() {
         return 0;
-                                
-    }
 
+    }
     /**
      * @return a string of all traders’ names sorted alphabetically
      */
+    /*
     public String traderNames() {
-        return null;
-    }
+       return allTransactions.stream()
+               .map(Transaction::getTrader)
+               .sorted(Comparator.comparing(Trader::getName))
+               .collect(Collectors.toCollection());
+
+
+
+
+    }*/
 }

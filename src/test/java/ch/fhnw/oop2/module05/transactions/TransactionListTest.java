@@ -110,7 +110,7 @@ class TransactionListTest {
 		assertTrue(transactionList.traderInCity("Brugg"));
 		assertFalse(transactionList.traderInCity("Freiburg"));
 	}
-/*
+
 	@Test
 	void testRelocateTraders() {
 		//when
@@ -123,7 +123,7 @@ class TransactionListTest {
 		List<Trader> tradersInLondon = transactionList.traders("London");
 		assertEquals(3, tradersInLondon.size());
 		assertFalse(tradersInLondon.contains(mario));
-	} */
+	}
 
 	@Test
 	void testHighestValueTransaction()  {

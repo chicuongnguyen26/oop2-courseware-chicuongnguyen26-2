@@ -1,0 +1,10 @@
+.button
+{
+    -fx-border-color: aliceblue;
+    -fx-background-color: mediumturquoise;
+    -fx-border-style: hidden;
+    -fx-border-radius: 3;
+    -fx-font: bold;
+    -fx-text-fill: aliceblue;
+
+}
