@@ -1,8 +1,10 @@
 package ch.fhnw.oop2.module06.calculator;
 
+import java.awt.event.ActionEvent;
 import java.io.File;
 import java.util.ArrayList;
 
+import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
@@ -31,6 +33,7 @@ public class CalculatorUI extends GridPane {
     private Image image;
 
 
+
     public CalculatorUI() {
         initializeControls();
         layoutControls();
@@ -39,22 +42,7 @@ public class CalculatorUI extends GridPane {
     private void initializeSelf(){
         String styleSheet = getClass().getResource("style.css").toExternalForm();
         getStylesheets().add(styleSheet);
-
-        equal.getStyleClass().add("toolbar-left");
-        plus.getStyleClass().add("toolbar-left");
-        minus.getStyleClass().add("toolbar-left");
-        multiply.getStyleClass().add("toolbar-left");
-        // numberButtons.get(0).getStyleClass().add("toolbar-left");
-        divide.getStyleClass().add("toolbar-left");
-        numberButtons.get(9).getStyleClass().add("toolbar-left");
-        numberButtons.get(6).getStyleClass().add("toolbar-left");
-        numberButtons.get(3).getStyleClass().add("toolbar-left");
-        plusminus.getStyleClass().add("toolbar-left");
-        numberButtons.get(8).getStyleClass().add("toolbar-left");
-        numberButtons.get(5).getStyleClass().add("toolbar-left");
-        numberButtons.get(2).getStyleClass().add("toolbar-left");
-
-    }
+            }
     private void initializeControls() {
         for (int i = 0; i < 10; i++) {
             numberButtons.add(createButton(String.valueOf(i)));
@@ -72,10 +60,11 @@ public class CalculatorUI extends GridPane {
 
         display = new Label("0");
         display.setMaxWidth(Double.MAX_VALUE);
-        display.setMinHeight(50.0);
+        display.setMinHeight(70.0);
+
 
         selectedImage = new ImageView();
-        image = new Image("file:///C:/Users/Nguyen/Documents/ironman.jpg");
+        image = new Image("file:///C:/Users/chicu/Documents/ironman1.gif");
         selectedImage.setImage(image);
 
     }
@@ -84,7 +73,7 @@ public class CalculatorUI extends GridPane {
         Button button = new Button(text);
         button.setMaxWidth(Double.MAX_VALUE);
         button.setMaxHeight(Double.MAX_VALUE);
-        button.setMinSize(45.0, 50.0);
+        button.setMinSize(75.0, 80.0);
 
         return button;
     }
@@ -98,7 +87,7 @@ public class CalculatorUI extends GridPane {
         rc.setVgrow(Priority.ALWAYS);
         getRowConstraints().addAll(new RowConstraints(), rc, rc, rc, rc, rc);
 
-        add(display, 0, 0, 4, 1);
+        add(display, 0, 0, 5, 1);
 
         add(ac, 0, 1);
         add(plusminus, 1, 1);
@@ -123,8 +112,10 @@ public class CalculatorUI extends GridPane {
         add(numberButtons.get(0), 0, 5, 2, 1);
         add(dot, 2, 5);
 
-        add(selectedImage, 4, 1);
+        add(selectedImage, 4, 1, 1, 5);
 
+    // test
     }
+
 
 }

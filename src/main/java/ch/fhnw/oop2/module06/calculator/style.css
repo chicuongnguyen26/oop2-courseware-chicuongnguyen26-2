@@ -1,30 +1,16 @@
-.label
-{
-    -fx-background-color:#0A2D31;
-    -fx-text-fill:#7CA1BB;
+.label{
+    -fx-background-color: black;
+    -fx-text-fill: white;
 }
-.button
-{
-    -fx-background-color:#0A2D31;
-    -fx-font-family:"Exo2";
-    -fx-text-fill:#7CA1BB;
-    -fx-border-radius:0;
-    -fx-opacity: 1;
-
+.button {
+    -fx-background-color: black;
+    -fx-effect: dropshadow(one-pass-box, #7CA1BB, 10, 0.0, 5.0, -5.0);
+    -fx-text-fill: red;
 
 }
+
 .button:pressed{
-    -fx-scale-y:0.9;
-    -fx-scale-x:0.9;
-}
-.button:hover{
-    -fx-background-color:#383838;
-    -fx-scale-y:1.1;
+    -fx-effect: dropshadow(one-pass-box, white, 10, 1, 5.0, -5.0);
 }
 
-.toolbar-left{
-    -fx-border-width:0 0 0 2px;
-    -fx-border-color:#7CA1BB;
-    -fx-text-fill:yellow;
 
-}
