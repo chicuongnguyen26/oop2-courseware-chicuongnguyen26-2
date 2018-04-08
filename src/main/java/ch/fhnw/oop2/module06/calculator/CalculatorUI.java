@@ -32,6 +32,9 @@ public class CalculatorUI extends GridPane {
     private ImageView selectedImage;
     private Image image;
 
+    private ImageView iv;
+    private Image bgImage;
+
 
 
     public CalculatorUI() {
@@ -66,6 +69,10 @@ public class CalculatorUI extends GridPane {
         selectedImage = new ImageView();
         image = new Image("file:///C:/Users/chicu/Documents/ironman1.gif");
         selectedImage.setImage(image);
+
+        selectedImage.setFitHeight(400.0);
+        selectedImage.setFitWidth(640.00);
+
 
     }
 
@@ -113,6 +120,7 @@ public class CalculatorUI extends GridPane {
         add(dot, 2, 5);
 
         add(selectedImage, 4, 1, 1, 5);
+
 
     // test
     }
