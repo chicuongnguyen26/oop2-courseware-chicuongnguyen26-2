@@ -1,8 +1,8 @@
 .label{
     -fx-alignment: CENTER-RIGHT;
     -fx-background-color: black;
-    -fx-text-fill: red;
-    -fx-font-size: 18px;
+    -fx-text-fill: #A9F4FF;
+    -fx-font-size: 20px;
 
 
 }
@@ -16,12 +16,65 @@
 
 }
 .button:pressed{
-    -fx-effect: dropshadow(one-pass-box, white, 10, 1, 5.0, -5.0);
+    -fx-effect: dropshadow(gaussian, red, 11, 0.0, 1.0, -1.0);
 }
 
 .toolbar-zero{
-    -fx-background-image: url("Number0.gif");
+    -fx-background-image: url("Numberzero.gif");
+}
+.toolbar-one{
+    -fx-background-image: url("numberone.gif");
+}
+.toolbar-two{
+    -fx-background-image: url("numbertwo.gif");
+}
+.toolbar-three{
+    -fx-background-image: url("Numberthree.gif");
+}
+.toolbar-four{
+    -fx-background-image: url("numberfour.gif");
+}
+.toolbar-five{
+    -fx-background-image: url("numberfive.gif");
+}
+.toolbar-six{
+    -fx-background-image: url("Numbersix.gif");
+}
+.toolbar-seven{
+    -fx-background-image: url("numberseven.gif");
+}
+.toolbar-eight{
+    -fx-background-image: url("numbereight.gif");
+}
+.toolbar-nine{
+    -fx-background-image: url("numbernine.gif");
 }
 
 
-
+.toolbar-c{
+    -fx-background-image: url("C.gif");
+}
+.toolbar-divide{
+    -fx-background-image: url("divide.gif");
+}
+.toolbar-multiply{
+    -fx-background-image: url("multiply.gif");
+}
+.toolbar-minus{
+    -fx-background-image: url("minus.gif");
+}
+.toolbar-plus{
+    -fx-background-image: url("plus.gif");
+}
+.toolbar-plusminus{
+    -fx-background-image: url("plusminus.gif");
+}
+.toolbar-equal{
+    -fx-background-image: url("equal.gif");
+}
+.toolbar-dot{
+    -fx-background-image: url("dot.gif");
+}
+.toolbar-display{
+    -fx-background-image: url("display.gif");
+}
