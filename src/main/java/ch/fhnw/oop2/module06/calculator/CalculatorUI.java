@@ -32,8 +32,10 @@ public class CalculatorUI extends GridPane {
     private ImageView selectedImage;
     private Image image;
 
-    private ImageView iv;
-    private Image bgImage;
+    private ImageView number0;
+    private Image image0;
+
+
 
 
 
@@ -45,7 +47,7 @@ public class CalculatorUI extends GridPane {
     private void initializeSelf(){
         String styleSheet = getClass().getResource("style.css").toExternalForm();
         getStylesheets().add(styleSheet);
-            }
+        }
     private void initializeControls() {
         for (int i = 0; i < 10; i++) {
             numberButtons.add(createButton(String.valueOf(i)));
@@ -67,12 +69,11 @@ public class CalculatorUI extends GridPane {
 
 
         selectedImage = new ImageView();
-        image = new Image("file:///C:/Users/chicu/Documents/ironman1.gif");
+        image = new Image("file:///C:/Users/Nguyen/Documents/ironman1.gif");
         selectedImage.setImage(image);
 
-        selectedImage.setFitHeight(400.0);
-        selectedImage.setFitWidth(640.00);
-
+        selectedImage.setFitHeight(480.0);
+        selectedImage.setFitWidth(720.00);
 
     }
 
@@ -94,7 +95,7 @@ public class CalculatorUI extends GridPane {
         rc.setVgrow(Priority.ALWAYS);
         getRowConstraints().addAll(new RowConstraints(), rc, rc, rc, rc, rc);
 
-        add(display, 0, 0, 5, 1);
+        add(display, 0, 0, 4, 1);
 
         add(ac, 0, 1);
         add(plusminus, 1, 1);
@@ -119,10 +120,10 @@ public class CalculatorUI extends GridPane {
         add(numberButtons.get(0), 0, 5, 2, 1);
         add(dot, 2, 5);
 
-        add(selectedImage, 4, 1, 1, 5);
+        add(selectedImage, 4, 0, 1, 6);
 
 
-    // test
+
     }
 
 
