@@ -47,6 +47,7 @@ public class CalculatorUI extends GridPane {
     private void initializeSelf(){
         String styleSheet = getClass().getResource("style.css").toExternalForm();
         getStylesheets().add(styleSheet);
+        numberButtons.get(0).getStyleClass().add("toolbar-zero");
         }
     private void initializeControls() {
         for (int i = 0; i < 10; i++) {
@@ -71,7 +72,6 @@ public class CalculatorUI extends GridPane {
         selectedImage = new ImageView();
         image = new Image("file:///C:/Users/Nguyen/Documents/ironman1.gif");
         selectedImage.setImage(image);
-
         selectedImage.setFitHeight(480.0);
         selectedImage.setFitWidth(720.00);
 
