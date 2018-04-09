@@ -48,21 +48,39 @@ public class CalculatorUI extends GridPane {
         String styleSheet = getClass().getResource("style.css").toExternalForm();
         getStylesheets().add(styleSheet);
         numberButtons.get(0).getStyleClass().add("toolbar-zero");
+        numberButtons.get(1).getStyleClass().add("toolbar-one");
+        numberButtons.get(2).getStyleClass().add("toolbar-two");
+        numberButtons.get(3).getStyleClass().add("toolbar-three");
+        numberButtons.get(4).getStyleClass().add("toolbar-four");
+        numberButtons.get(5).getStyleClass().add("toolbar-five");
+        numberButtons.get(6).getStyleClass().add("toolbar-six");
+        numberButtons.get(7).getStyleClass().add("toolbar-seven");
+        numberButtons.get(8).getStyleClass().add("toolbar-eight");
+        numberButtons.get(9).getStyleClass().add("toolbar-nine");
+        ac.getStyleClass().add("toolbar-c");
+        divide.getStyleClass().add("toolbar-divide");
+        multiply.getStyleClass().add("toolbar-multiply");
+        minus.getStyleClass().add("toolbar-minus");
+        plus.getStyleClass().add("toolbar-plus");
+        plusminus.getStyleClass().add("toolbar-plusminus");
+        equal.getStyleClass().add("toolbar-equal");
+        dot.getStyleClass().add("toolbar-dot");
+        display.getStyleClass().add("toolbar-display");
         }
     private void initializeControls() {
         for (int i = 0; i < 10; i++) {
-            numberButtons.add(createButton(String.valueOf(i)));
+            numberButtons.add(createButton(String.valueOf("")));
         }
 
-        dot = createButton(".");
-        plus = createButton("+");
-        minus = createButton("-");
-        multiply = createButton("*");
-        divide = createButton("/");
+        dot = createButton("");
+        plus = createButton("");
+        minus = createButton("");
+        multiply = createButton("");
+        divide = createButton("");
 
-        plusminus = createButton("+/-");
-        equal = createButton("=");
-        ac = createButton("C");
+        plusminus = createButton("");
+        equal = createButton("");
+        ac = createButton("");
 
         display = new Label("0");
         display.setMaxWidth(Double.MAX_VALUE);
@@ -70,7 +88,7 @@ public class CalculatorUI extends GridPane {
 
 
         selectedImage = new ImageView();
-        image = new Image("file:///C:/Users/Nguyen/Documents/ironman1.gif");
+        image = new Image("file:///C:/Users/chicu/Documents/ironman1.gif");
         selectedImage.setImage(image);
         selectedImage.setFitHeight(480.0);
         selectedImage.setFitWidth(720.00);
