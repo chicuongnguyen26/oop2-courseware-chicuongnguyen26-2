@@ -88,7 +88,7 @@ public class CalculatorUI extends GridPane {
 
 
         selectedImage = new ImageView();
-        image = new Image("file:///C:/Users/chicu/Documents/ironman1.gif");
+        image = new Image("file:///C:/Users/Nguyen/Documents/ironman1.gif");
         selectedImage.setImage(image);
         selectedImage.setFitHeight(480.0);
         selectedImage.setFitWidth(720.00);
