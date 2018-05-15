@@ -30,7 +30,7 @@ public class ApplicationUI extends VBox {
 
     private void initializeControls() {
 		button   = new Button("Add New Element");
-		listView = new ListView<>(model.getElements());
+		listView = new ListView<>();
 	}
 
 	private void layoutControls() {
@@ -44,7 +44,6 @@ public class ApplicationUI extends VBox {
 	}
 
 	private void setupEventHandlers() {
-		button.setOnAction(event -> model.newElements());
 	}
 
 	private void setupValueChangedListeners() {
