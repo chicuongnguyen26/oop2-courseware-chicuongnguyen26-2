@@ -18,7 +18,7 @@ import javafx.scene.layout.VBox;
 public class ApplicationUI extends VBox {
 	private final WahlPM model; // Gesamte Infos, was dargestellt werden soll vom PM
 
-	private TableView<Object> tabelle;
+	private TableView<Resultat> tabelle;
 	private Label             anzahlGemeinden;
 
 	public ApplicationUI(WahlPM model) {
@@ -41,11 +41,23 @@ public class ApplicationUI extends VBox {
 		anzahlGemeinden = new Label();
 	}
 
-	private TableView<Object> initializeResultatTabelle() {
-		TableView<Object> tableView = new TableView<>();
+	private TableView<Resultat> initializeResultatTabelle() {
+		TableView<Resultat> tableView = new TableView<>(model.getResulate()); // nur vom Model können Daten abgerufen werden
+        TableColumn<Resultat, String> nameCol = new TableColumn<>("Name");
+        nameCol.setCellValueFactory(cell -> cell.getValue().gemeindeNamenProperty());
+        /*
+        Grundprinzip bei einem Integer -> funktioniert nicht,
+        TableColumn<Resultat, Integer> wahlberechtigtenColumn = new TableColumn<>("Wahlber.");
+        nameCol.setCellValueFactory(cell -> cell.getValue().wahlberechtigteProperty());
+        */
 
+        TableColumn<Resultat, Number> wahlberechtigtenColumn = new TableColumn<>("Wahlber."); // mit Number eine Zahl darstellen
+        wahlberechtigtenColumn.setCellValueFactory(cell -> cell.getValue().wahlberechtigteProperty());
 
+        TableColumn<Resultat, Number> waehlendeCol = new TableColumn<>("Wählende");
+        waehlendeCol.setCellValueFactory(cell -> cell.getValue().waehlendeProperty());
 
+        tableView.getColumns().addAll(nameCol, wahlberechtigtenColumn, waehlendeCol);
 		return tableView;
 	}
 
