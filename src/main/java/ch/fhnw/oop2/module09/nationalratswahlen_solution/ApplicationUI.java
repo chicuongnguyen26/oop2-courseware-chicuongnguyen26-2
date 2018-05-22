@@ -57,7 +57,11 @@ public class ApplicationUI extends VBox {
         TableColumn<Resultat, Number> waehlendeCol = new TableColumn<>("Wählende");
         waehlendeCol.setCellValueFactory(cell -> cell.getValue().waehlendeProperty());
 
-        tableView.getColumns().addAll(nameCol, wahlberechtigtenColumn, waehlendeCol);
+		TableColumn<Resultat, Number> wahlbeteilCol = new TableColumn<>("Wahlbeteiligung");
+		wahlbeteilCol.setCellValueFactory(cell -> cell.getValue().wahlbeteiligungProperty());
+
+
+        tableView.getColumns().addAll(nameCol, wahlberechtigtenColumn, waehlendeCol, wahlbeteilCol);
 		return tableView;
 	}
 
@@ -74,7 +78,8 @@ public class ApplicationUI extends VBox {
 	}
 
     private void setupBindings() {
-
+		anzahlGemeinden.textProperty().bind(Bindings.size(model.getResulate())
+				.asString("Anzahl der Gemeinden %d in der Schweiz"));
 	}
 
 
